@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Test - Apotek Sehat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2563eb;
+            margin-bottom: 30px;
+        }
+        .test-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f9fafb;
+            border-radius: 8px;
+            border-left: 4px solid #2563eb;
+        }
+        .test-section h2 {
+            color: #1f2937;
+            margin-bottom: 15px;
+        }
+        .test-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 4px;
+        }
+        .status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .status.pass {
+            background: #10b981;
+            color: white;
+        }
+        .status.manual {
+            background: #f59e0b;
+            color: white;
+        }
+        .instructions {
+            background: #dbeafe;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .breakpoint-info {
+            display: inline-block;
+            padding: 4px 8px;
+            background: #e5e7eb;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        .open-site {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .open-site:hover {
+            background: #1e40af;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 Responsive Design Test - Apotek Sehat</h1>
+        
+        <div class="instructions">
+            <h3>📋 Testing Instructions:</h3>
+            <p>1. Open the main website in a new tab</p>
+            <p>2. Use browser DevTools (F12) to test different screen sizes</p>
+            <p>3. Verify each test case below at the specified breakpoints</p>
+            <p>4. Check off items as you verify them</p>
+        </div>
+
+        <a href="index.html" target="_blank" class="open-site">🚀 Open Apotek Sehat Website</a>
+
+        <!-- Mobile Tests: 320px - 767px -->
+        <div class="test-section">
+            <h2>📱 Mobile Tests <span class="breakpoint-info">320px - 767px</span></h2>
+            
+            <div class="test-item">
+                <input type="checkbox" id="mobile-1">
+                <label for="mobile-1">
+                    <strong>Single Column Layout:</strong> All sections (services, products, contact) display in single column
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+            
+            <div class="test-item">
+                <input type="checkbox" id="mobile-2">
+                <label for="mobile-2">
+                    <strong>Hamburger Menu:</strong> Navigation shows hamburger icon instead of full menu
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+            
+            <div class="test-item">
+                <input type="checkbox" id="mobile-3">
+                <label for="mobile-3">
+                    <strong>Mobile Menu Toggle:</strong> Clicking hamburger opens/closes mobile menu
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+            
+            <div class="test-item">
+                <input type="checkbox" id="mobile-4">
+                <label for="mobile-4">
+                    <strong>Hero Text Size:</strong> Hero title and subtitle are appropriately sized for mobile
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+            
+            <div class="test-item">
+                <input type="checkbox" id="mobile-5">
+                <label for="mobile-5">
+                    <strong>No Horizontal Scroll:</strong> Page does not scroll horizontally at any mobile width
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+            
+            <div class="test-item">
+                <input type="checkbox" id="mobile-6">
+                <label for="mobile-6">
+                    <strong>Contact Form Stacked:</strong> Contact form and info are stacked vertically
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+            
+            <div class="test-item">
+                <input type="checkbox" id="mobile-7">
+                <label for="mobile-7">
+                    <strong>Footer Single Column:</strong> Footer content displays in single column
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Tablet Tests: 768px - 1023px -->
+        <div class="test-section">
+            <h2>📱 Tablet Tests <span class="breakpoint-info">768px - 1023px</span></h2>
+            
+            <div class="test-item">
+                <input type="checkbox" id="tablet-1">
+                <label for="tablet-1">
+                    <strong>Services Grid:</strong> Services display in 2-column grid
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+            
+            <div class="test-item">
+                <input type="checkbox" id="tablet-2">
+                <label for="tablet-2">
+                    <strong>Products Grid:</strong> Products display in 2-column grid
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+            
+            <div class="test-item">
+                <input type="checkbox" id="tablet-3">
+                <label for="tablet-3">
+                    <strong>Full Navigation:</strong> Navigation shows full menu (no hamburger)
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+            
+            <div class="test-item">
+                <input type="checkbox" id="tablet-4">
+                <label for="tablet-4">
+                    <strong>Contact Layout:</strong> Contact form and info display side by side
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+            
+            <div class="test-item">
+                <input type="checkbox" id="tablet-5">
+                <label for="tablet-5">
+                    <strong>Footer Layout:</strong> Footer displays in 2-column layout with info spanning full width
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+            
+            <div class="test-item">
+                <input type="checkbox" id="tablet-6">
+                <label for="tablet-6">
+                    <strong>No Horizontal Scroll:</strong> Page does not scroll horizontally at tablet width
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Desktop Tests: 1024px+ -->
+        <div class="test-section">
+            <h2>🖥️ Desktop Tests <span class="breakpoint-info">1024px+</span></h2>
+            
+            <div class="test-item">
+                <input type="checkbox" id="desktop-1">
+                <label for="desktop-1">
+                    <strong>Services Grid:</strong> Services display in 3-column grid
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+            
+            <div class="test-item">
+                <input type="checkbox" id="desktop-2">
+                <label for="desktop-2">
+                    <strong>Products Grid:</strong> Products display in 3-column grid
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+            
+            <div class="test-item">
+                <input type="checkbox" id="desktop-3">
+                <label for="desktop-3">
+                    <strong>Full Navigation:</strong> Navigation shows full menu with proper spacing
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+            
+            <div class="test-item">
+                <input type="checkbox" id="desktop-4">
+                <label for="desktop-4">
+                    <strong>Contact Layout:</strong> Contact form and info display side by side with optimal spacing
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+            
+            <div class="test-item">
+                <input type="checkbox" id="desktop-5">
+                <label for="desktop-5">
+                    <strong>Footer Layout:</strong> Footer displays in 3-column layout (2fr 1fr 1fr)
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+            
+            <div class="test-item">
+                <input type="checkbox" id="desktop-6">
+                <label for="desktop-6">
+                    <strong>Max Width Container:</strong> Content is contained within 1200px max-width
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+            
+            <div class="test-item">
+                <input type="checkbox" id="desktop-7">
+                <label for="desktop-7">
+                    <strong>Hover Effects:</strong> All hover effects work properly (cards, buttons, links)
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Cross-Breakpoint Tests -->
+        <div class="test-section">
+            <h2>🔄 Cross-Breakpoint Tests <span class="breakpoint-info">All Sizes</span></h2>
+            
+            <div class="test-item">
+                <input type="checkbox" id="cross-1">
+                <label for="cross-1">
+                    <strong>Smooth Transitions:</strong> Layout changes smoothly when resizing browser
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+            
+            <div class="test-item">
+                <input type="checkbox" id="cross-2">
+                <label for="cross-2">
+                    <strong>Images Responsive:</strong> All images scale properly and maintain aspect ratio
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+            
+            <div class="test-item">
+                <input type="checkbox" id="cross-3">
+                <label for="cross-3">
+                    <strong>Text Readability:</strong> Text remains readable at all breakpoints
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+            
+            <div class="test-item">
+                <input type="checkbox" id="cross-4">
+                <label for="cross-4">
+                    <strong>Touch Targets:</strong> Buttons and links are easily tappable on mobile (min 44px)
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+            
+            <div class="test-item">
+                <input type="checkbox" id="cross-5">
+                <label for="cross-5">
+                    <strong>Viewport Meta Tag:</strong> Page scales correctly on mobile devices
+                    <span class="status manual">MANUAL</span>
+                </label>
+            </div>
+        </div>
+
+        <div style="margin-top: 40px; padding: 20px; background: #10b981; color: white; border-radius: 8px; text-align: center;">
+            <h3>✅ Testing Complete!</h3>
+            <p>Once all checkboxes are checked, the responsive design has been verified across all breakpoints.</p>
+        </div>
+    </div>
+
+    <script>
+        // Save checkbox states to localStorage
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            // Load saved state
+            const saved = localStorage.getItem(checkbox.id);
+            if (saved === 'true') {
+                checkbox.checked = true;
+            }
+            
+            // Save state on change
+            checkbox.addEventListener('change', function() {
+                localStorage.setItem(this.id, this.checked);
+            });
+        });
+    </script>
+</body>
+</html>
