@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Falhan Jaya Medica - Solusi Kesehatan Keluarga Anda. Layanan kesehatan, konsultasi obat, dan katalog produk farmasi.">
+    <meta name="keywords" content="apotek, farmasi, obat, kesehatan, konsultasi obat, pemeriksaan kesehatan">
+    <meta name="author" content="Apotek Sehat">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Falhan Jaya Medica - Solusi Kesehatan Keluarga">
+    <meta property="og:description" content="Layanan kesehatan profesional dan katalog obat lengkap">
+    <meta property="og:type" content="website">
+    
+    <title>Falhan Jaya Medica - Solusi Kesehatan Keluarga Anda</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo" role="banner" id="secretLogo">
+                <img src="assets/icons/plus.svg" alt="Falhan Jaya Medica" class="logo-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="logo-text">Falhan Jaya Medica</span>
+            </div>
+            <ul class="nav-menu" role="menubar"></ul>
+                <li class="nav-item" role="none">
+                    <a href="#home" class="nav-link" role="menuitem">Home</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#services" class="nav-link" role="menuitem">Layanan</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#products" class="nav-link" role="menuitem">Produk</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#contact" class="nav-link" role="menuitem">Kontak</a>
+                </li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" role="banner" aria-label="Welcome section">
+        <div class="hero-content">
+            <h1 class="hero-title">Falhan Jaya Medica</h1>
+            <p class="hero-subtitle">Solusi Kesehatan Keluarga Anda</p>
+            <button class="cta-button" aria-label="View our products">Lihat Produk</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services" aria-labelledby="services-title">
+        <div class="container">
+            <h2 id="services-title" class="section-title animate-on-scroll fade-in-up">Layanan Kami</h2>
+            <div class="services-grid stagger-animation" role="list">
+                <!-- Service Card 1: Health Checkups -->
+                <div class="service-card" role="listitem" tabindex="0" data-service="health">
+                    <div class="service-icon" aria-hidden="true">
+                        <ion-icon name="fitness-outline"></ion-icon>
+                    </div>
+                    <h3 class="service-title">Pemeriksaan Kesehatan</h3>
+                    <p class="service-description">Cek kesehatan rutin dengan peralatan modern dan tenaga medis profesional untuk menjaga kesehatan Anda</p>
+                    <button class="service-learn-more">Lihat Detail</button>
+                </div>
+
+                <!-- Service Card 2: Medicine Consultation -->
+                <div class="service-card" role="listitem" tabindex="0" data-service="consultation">
+                    <div class="service-icon" aria-hidden="true">
+                        <ion-icon name="medical-outline"></ion-icon>
+                    </div>
+                    <h3 class="service-title">Konsultasi Obat</h3>
+                    <p class="service-description">Konsultasi gratis dengan apoteker berpengalaman untuk memastikan penggunaan obat yang tepat dan aman</p>
+                    <button class="service-learn-more">Lihat Detail</button>
+                </div>
+
+                <!-- Service Card 3: Prescription Services -->
+                <div class="service-card" role="listitem" tabindex="0" data-service="prescription">
+                    <div class="service-icon" aria-hidden="true">
+                        <ion-icon name="document-text-outline"></ion-icon>
+                    </div>
+                    <h3 class="service-title">Layanan Resep</h3>
+                    <p class="service-description">Proses resep dokter dengan cepat dan akurat, tersedia layanan antar untuk kenyamanan Anda</p>
+                    <button class="service-learn-more">Lihat Detail</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Modal -->
+    <div id="serviceModal" class="service-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <ion-icon name="fitness-outline"></ion-icon>
+                </div>
+                <h2 class="modal-title">Pemeriksaan Kesehatan</h2>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description"></p>
+                <div class="modal-features">
+                    <h3>Layanan yang Tersedia:</h3>
+                    <ul class="features-list"></ul>
+                </div>
+                <div class="modal-cta">
+                    <a href="https://wa.me/6282239903088?text=Halo%20saya%20ingin%20konsultasi%20tentang%20layanan" class="modal-whatsapp-btn" target="_blank" rel="noopener noreferrer">
+                        <ion-icon name="logo-whatsapp"></ion-icon>
+                        Hubungi Kami via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <section id="products" class="products" aria-labelledby="products-title">
+        <div class="container">
+            <h2 id="products-title" class="section-title animate-on-scroll fade-in-up">Produk Kami</h2>
+            
+            <!-- Product Search and Filter -->
+            <div class="product-controls">
+                <div class="search-box">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <input type="text" id="productSearch" placeholder="Cari produk..." aria-label="Search products">
+                </div>
+                <div class="filter-buttons" role="group" aria-label="Product category filters">
+                    <button class="filter-btn active" data-category="all">Semua</button>
+                    <button class="filter-btn" data-category="Obat Demam">Obat Demam</button>
+                    <button class="filter-btn" data-category="Antibiotik">Antibiotik</button>
+                    <button class="filter-btn" data-category="Suplemen">Suplemen</button>
+                    <button class="filter-btn" data-category="Obat Maag">Obat Maag</button>
+                    <button class="filter-btn" data-category="Obat Batuk">Obat Batuk</button>
+                    <button class="filter-btn" data-category="Obat Luar">Obat Luar</button>
+                </div>
+            </div>
+            
+            <div class="products-grid stagger-animation" role="list">
+                <!-- Product cards will be dynamically generated -->
+            </div>
+            
+            <div class="no-results" style="display: none;">
+                <ion-icon name="search-outline"></ion-icon>
+                <p>Tidak ada produk yang ditemukan</p>
+            </div>
+            
+            <div class="show-more-container" style="display: none;">
+                <button class="show-more-btn" id="showMoreBtn">
+                    <span>Lihat Lebih Banyak</span>
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+                <p class="products-count"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+        <div class="container">
+            <h2 id="contact-title" class="section-title animate-on-scroll fade-in-up">Hubungi Kami</h2>
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <form id="contactForm" class="contact-form animate-on-scroll fade-in-left" aria-label="Contact form">
+                    <div class="form-group">
+                        <label for="name">Nama</label>
+                        <input type="text" id="name" name="name" required aria-required="true" aria-describedby="name-error">
+                        <span class="error-message" id="name-error" role="alert"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-error">
+                        <span class="error-message" id="email-error" role="alert"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telepon</label>
+                        <input type="tel" id="phone" name="phone" required aria-required="true" aria-describedby="phone-error">
+                        <span class="error-message" id="phone-error" role="alert"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan</label>
+                        <textarea id="message" name="message" rows="5" required aria-required="true" aria-describedby="message-error"></textarea>
+                        <span class="error-message" id="message-error" role="alert"></span>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Kirim Pesan</span>
+                        <span class="btn-loader" style="display: none;">
+                            <ion-icon name="hourglass-outline" class="spinning"></ion-icon>
+                            Mengirim...
+                        </span>
+                    </button>
+                    <div class="success-message" role="status" aria-live="polite"></div>
+                </form>
+                
+                <!-- Contact Information -->
+                <div class="contact-info animate-on-scroll fade-in-right" role="complementary" aria-label="Contact information">
+                    <div class="info-item">
+                        <div class="info-icon" aria-hidden="true">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+                        <div class="info-content">
+                            <h4>Alamat</h4>
+                            <p>Jl. Leo Mamiri</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon" aria-hidden="true">
+                            <ion-icon name="logo-whatsapp"></ion-icon>
+                        </div>
+                        <div class="info-content">
+                            <h4>WhatsApp</h4>
+                            <a href="https://wa.me/6282239903088?text=Halo%20saya%20ingin%20konsultasi%20kesehatan" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">+62 822-3990-3088</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon" aria-hidden="true">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <a href="mailto:falhanjaya22@gmail.com" aria-label="Email us at falhanjaya22@gmail.com">falhanjaya22@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon" aria-hidden="true">
+                            <ion-icon name="time-outline"></ion-icon>
+                        </div>
+                        <div class="info-content">
+                            <h4>Jam Operasional</h4>
+                            <p>Senin - Sabtu: 08:00 - 20:00</p>
+                            <p>Minggu: 09:00 - 17:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3 class="footer-logo">Falhan Jaya Medica</h3>
+                    <p class="footer-description">Solusi kesehatan keluarga Anda dengan layanan profesional dan produk berkualitas.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Tautan Cepat</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Layanan</a></li>
+                        <li><a href="#products">Produk</a></li>
+                        <li><a href="#contact">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Hubungi Kami</h4>
+                    <p>Jl. Leo Mamiri</p>
+                    <p>WhatsApp: <a href="https://wa.me/6282239903088?text=Halo%20saya%20ingin%20konsultasi%20kesehatan" target="_blank" rel="noopener noreferrer" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">+62 822-3990-3088</a></p>
+                    <p>Email: falhanjaya22@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Falhan Jaya Medica. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/6282239903088?text=Halo%20saya%20ingin%20konsultasi%20kesehatan" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Chat with us on WhatsApp">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top" style="display: none;">
+        <ion-icon name="arrow-up-outline"></ion-icon>
+    </button>
+
+    <!-- Admin Login Modal -->
+    <div id="adminLoginModal" class="admin-modal" style="display: none;">
+        <div class="modal-overlay"></div>
+        <div class="modal-content admin-login-content">
+            <button class="modal-close" aria-label="Close modal">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+            <div class="admin-login-header">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <h2>Admin Login</h2>
+            </div>
+            <form id="adminLoginForm" class="admin-login-form">
+                <div class="form-group">
+                    <label for="adminUsername">Username</label>
+                    <input type="text" id="adminUsername" required autocomplete="username">
+                </div>
+                <div class="form-group">
+                    <label for="adminPassword">Password</label>
+                    <input type="password" id="adminPassword" required autocomplete="current-password">
+                </div>
+                <button type="submit" class="admin-login-btn">Login</button>
+                <div class="admin-error-message"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Panel Modal -->
+    <div id="adminPanelModal" class="admin-modal" style="display: none;">
+        <div class="modal-overlay"></div>
+        <div class="modal-content admin-panel-content">
+            <div class="admin-panel-header">
+                <h2>
+                    <ion-icon name="settings-outline"></ion-icon>
+                    Admin Panel - Product Management
+                </h2>
+                <div class="admin-actions">
+                    <button class="admin-logout-btn" id="adminLogoutBtn">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                        Logout
+                    </button>
+                    <button class="modal-close" aria-label="Close panel">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="admin-panel-body">
+                <!-- Add Product Section -->
+                <div class="admin-section">
+                    <h3>
+                        <ion-icon name="add-circle-outline"></ion-icon>
+                        Add New Product
+                    </h3>
+                    <form id="addProductForm" class="admin-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="productName">Product Name *</label>
+                                <input type="text" id="productName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="productCategory">Category *</label>
+                                <select id="productCategory" required>
+                                    <option value="">Select Category</option>
+                                    <option value="Obat Demam">Obat Demam</option>
+                                    <option value="Antibiotik">Antibiotik</option>
+                                    <option value="Suplemen">Suplemen</option>
+                                    <option value="Obat Maag">Obat Maag</option>
+                                    <option value="Obat Batuk">Obat Batuk</option>
+                                    <option value="Obat Luar">Obat Luar</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="productPrice">Price (Rp) *</label>
+                                <input type="number" id="productPrice" required min="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="productImage">Image URL</label>
+                                <input type="text" id="productImage" placeholder="https://...">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="productDescription">Description *</label>
+                            <textarea id="productDescription" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="admin-btn admin-btn-primary">
+                            <ion-icon name="add-outline"></ion-icon>
+                            Add Product
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Manage Products Section -->
+                <div class="admin-section">
+                    <h3>
+                        <ion-icon name="list-outline"></ion-icon>
+                        Manage Products
+                    </h3>
+                    <div class="admin-products-list" id="adminProductsList">
+                        <!-- Products will be listed here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Product Modal -->
+    <div id="editProductModal" class="admin-modal" style="display: none;">
+        <div class="modal-overlay"></div>
+        <div class="modal-content admin-edit-content">
+            <button class="modal-close" aria-label="Close modal">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+            <div class="admin-edit-header">
+                <ion-icon name="create-outline"></ion-icon>
+                <h2>Edit Product</h2>
+            </div>
+            <form id="editProductForm" class="admin-form">
+                <input type="hidden" id="editProductId">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editProductName">Product Name *</label>
+                        <input type="text" id="editProductName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editProductCategory">Category *</label>
+                        <select id="editProductCategory" required>
+                            <option value="Obat Demam">Obat Demam</option>
+                            <option value="Antibiotik">Antibiotik</option>
+                            <option value="Suplemen">Suplemen</option>
+                            <option value="Obat Maag">Obat Maag</option>
+                            <option value="Obat Batuk">Obat Batuk</option>
+                            <option value="Obat Luar">Obat Luar</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editProductPrice">Price (Rp) *</label>
+                        <input type="number" id="editProductPrice" required min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="editProductImage">Image URL</label>
+                        <input type="text" id="editProductImage">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="editProductDescription">Description *</label>
+                    <textarea id="editProductDescription" rows="3" required></textarea>
+                </div>
+                <div class="admin-form-actions">
+                    <button type="submit" class="admin-btn admin-btn-primary">
+                        <ion-icon name="save-outline"></ion-icon>
+                        Save Changes
+                    </button>
+                    <button type="button" class="admin-btn admin-btn-secondary" onclick="closeEditModal()">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
