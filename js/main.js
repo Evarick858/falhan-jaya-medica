@@ -1533,10 +1533,10 @@ function renderAdminProductsList() {
                 </div>
             </div>
             <div class="admin-product-actions">
-                <button class="admin-icon-btn edit" onclick="openEditModal(${product.id})" aria-label="Edit product">
+                <button class="admin-icon-btn edit" onclick="openEditModal('${product.id}')" aria-label="Edit product">
                     <ion-icon name="create-outline"></ion-icon>
                 </button>
-                <button class="admin-icon-btn delete" onclick="deleteProduct(${product.id})" aria-label="Delete product">
+                <button class="admin-icon-btn delete" onclick="deleteProduct('${product.id}')" aria-label="Delete product">
                     <ion-icon name="trash-outline"></ion-icon>
                 </button>
             </div>
@@ -1550,7 +1550,7 @@ function renderAdminProductsList() {
  * Open Edit Modal
  */
 function openEditModal(productId) {
-    const product = products.find(p => p.id === productId);
+    const product = products.find(p => String(p.id) === String(productId));
     
     if (!product) return;
     
