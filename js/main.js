@@ -1548,27 +1548,8 @@ async function handleEditProduct(e) {
  * Delete Product
  */
 function deleteProduct(productId) {
-    const item = document.querySelector(`[data-product-id="${productId}"]`);
-    if (!item) return;
-
-    if (item.querySelector('.delete-confirm')) return;
-
-    const confirmRow = document.createElement('div');
-    confirmRow.className = 'delete-confirm';
-    confirmRow.innerHTML = `
-        <span>Hapus produk ini?</span>
-        <button class="admin-btn admin-btn-danger confirm-yes">Ya, Hapus</button>
-        <button class="admin-btn admin-btn-secondary confirm-no">Batal</button>
-    `;
-    item.appendChild(confirmRow);
-
-    confirmRow.querySelector('.confirm-yes').addEventListener('click', async () => {
-        await deleteProductFromFirestore(productId);
-    });
-
-    confirmRow.querySelector('.confirm-no').addEventListener('click', () => {
-        confirmRow.remove();
-    });
+    if (!window.confirm('Hapus produk ini?')) return;
+    deleteProductFromFirestore(productId);
 }
 
 // Make functions globally accessible
