@@ -1457,14 +1457,17 @@ function renderAdminProductsList() {
                 </div>
             </div>
             <div class="admin-product-actions">
-                <button class="admin-icon-btn edit" onclick="openEditModal('${product.id}')" aria-label="Edit product">
+                <button class="admin-icon-btn edit" aria-label="Edit product">
                     <ion-icon name="create-outline"></ion-icon>
                 </button>
-                <button class="admin-icon-btn delete" onclick="deleteProduct('${product.id}')" aria-label="Delete product">
+                <button class="admin-icon-btn delete" aria-label="Delete product">
                     <ion-icon name="trash-outline"></ion-icon>
                 </button>
             </div>
         `;
+
+        item.querySelector('.admin-icon-btn.edit').addEventListener('click', () => openEditModal(product.id));
+        item.querySelector('.admin-icon-btn.delete').addEventListener('click', () => deleteProduct(product.id));
         
         listContainer.appendChild(item);
     });
