@@ -1013,7 +1013,7 @@ function createProductCard(product) {
     // Add click handler to product button
     button.addEventListener('click', function(e) {
         e.stopPropagation();
-        openProductWhatsApp(product);
+        openProductDetail(product);
     });
     
     footer.appendChild(price);
@@ -1031,10 +1031,35 @@ function createProductCard(product) {
     
     // Add click handler to entire card
     card.addEventListener('click', function() {
-        openProductWhatsApp(product);
+        openProductDetail(product);
     });
     
     return card;
+}
+
+function openProductDetail(product) {
+    const modal = document.getElementById('productDetailModal');
+    if (!modal) return;
+
+    modal.querySelector('.pd-image').src = product.image;
+    modal.querySelector('.pd-image').alt = product.name;
+    modal.querySelector('.pd-category').textContent = product.category;
+    modal.querySelector('.pd-name').textContent = product.name;
+    modal.querySelector('.pd-price').textContent = `Rp ${product.price.toLocaleString('id-ID')}`;
+    modal.querySelector('.pd-description').textContent = product.description;
+    modal.querySelector('.pd-whatsapp').href = waLink(
+        `Halo, saya ingin menanyakan tentang produk:\n\n*${product.name}*\nKategori: ${product.category}\n\nApakah produk ini tersedia?`
+    );
+
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeProductDetail() {
+    const modal = document.getElementById('productDetailModal');
+    if (!modal) return;
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
 }
 
 /**

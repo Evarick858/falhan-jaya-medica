@@ -585,6 +585,29 @@
         </div>
     </div>
 
+    <!-- Product Detail Modal -->
+    <div id="productDetailModal" class="admin-modal" style="display:none;">
+        <div class="modal-overlay" onclick="closeProductDetail()"></div>
+        <div class="modal-content product-detail-content">
+            <button class="modal-close" onclick="closeProductDetail()" aria-label="Close">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+            <div class="pd-image-wrap">
+                <img class="pd-image" src="" alt="">
+            </div>
+            <div class="pd-body">
+                <span class="pd-category product-category"></span>
+                <h2 class="pd-name"></h2>
+                <p class="pd-price product-price"></p>
+                <p class="pd-description"></p>
+                <a class="pd-whatsapp modal-whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                    Tanya via WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- JavaScript -->
     <script type="module" src="js/main.js"></script>
 </body>
