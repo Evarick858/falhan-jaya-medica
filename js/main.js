@@ -152,13 +152,15 @@ function formatPhone(num) {
 // Product data - loaded from Firestore
 let products = [];
 
+const PLACEHOLDER = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23e5e7eb'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%236b7280'%3EProduk Apotek%3C/text%3E%3C/svg%3E`;
+
 const DEFAULT_PRODUCTS = [
-    { id: '1', name: "Paracetamol 500mg", category: "Obat Demam", description: "Obat penurun demam dan pereda nyeri untuk dewasa dan anak-anak", price: 15000, image: "https://via.placeholder.com/300x300/2563eb/ffffff?text=Paracetamol" },
-    { id: '2', name: "Amoxicillin 500mg", category: "Antibiotik", description: "Antibiotik untuk infeksi bakteri, harus dengan resep dokter", price: 45000, image: "https://via.placeholder.com/300x300/10b981/ffffff?text=Amoxicillin" },
-    { id: '3', name: "Vitamin C 1000mg", category: "Suplemen", description: "Suplemen vitamin C untuk meningkatkan daya tahan tubuh", price: 35000, image: "https://via.placeholder.com/300x300/f59e0b/ffffff?text=Vitamin+C" },
-    { id: '4', name: "Antasida Tablet", category: "Obat Maag", description: "Meredakan gejala maag, perut kembung, dan nyeri lambung", price: 20000, image: "https://via.placeholder.com/300x300/8b5cf6/ffffff?text=Antasida" },
-    { id: '5', name: "Obat Batuk Sirup", category: "Obat Batuk", description: "Meredakan batuk berdahak dan tidak berdahak untuk segala usia", price: 28000, image: "https://via.placeholder.com/300x300/ec4899/ffffff?text=Obat+Batuk" },
-    { id: '6', name: "Salep Luka", category: "Obat Luar", description: "Salep antibiotik untuk luka ringan, lecet, dan luka bakar ringan", price: 18000, image: "https://via.placeholder.com/300x300/06b6d4/ffffff?text=Salep+Luka" }
+    { id: '1', name: "Paracetamol 500mg", category: "Obat Demam", description: "Obat penurun demam dan pereda nyeri untuk dewasa dan anak-anak", price: 15000, image: PLACEHOLDER },
+    { id: '2', name: "Amoxicillin 500mg", category: "Antibiotik", description: "Antibiotik untuk infeksi bakteri, harus dengan resep dokter", price: 45000, image: PLACEHOLDER },
+    { id: '3', name: "Vitamin C 1000mg", category: "Suplemen", description: "Suplemen vitamin C untuk meningkatkan daya tahan tubuh", price: 35000, image: PLACEHOLDER },
+    { id: '4', name: "Antasida Tablet", category: "Obat Maag", description: "Meredakan gejala maag, perut kembung, dan nyeri lambung", price: 20000, image: PLACEHOLDER },
+    { id: '5', name: "Obat Batuk Sirup", category: "Obat Batuk", description: "Meredakan batuk berdahak dan tidak berdahak untuk segala usia", price: 28000, image: PLACEHOLDER },
+    { id: '6', name: "Salep Luka", category: "Obat Luar", description: "Salep antibiotik untuk luka ringan, lecet, dan luka bakar ringan", price: 18000, image: PLACEHOLDER }
 ];
 
 // Save product to Firestore
@@ -969,8 +971,8 @@ function createProductCard(product) {
     
     // Add error handler for image loading failures
     img.onerror = function() {
-        this.src = 'https://via.placeholder.com/300x300/e5e7eb/6b7280?text=Produk+Apotek';
-        this.alt = 'Placeholder image';
+        this.onerror = null;
+        this.src = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23e5e7eb'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%236b7280'%3EProduk Apotek%3C/text%3E%3C/svg%3E`;
     };
     
     imageContainer.appendChild(img);
@@ -1407,7 +1409,7 @@ async function handleAddProduct(e) {
         name: document.getElementById('productName').value,
         category: document.getElementById('productCategory').value,
         price: parseInt(document.getElementById('productPrice').value),
-        image: uploadedImage || `https://via.placeholder.com/300x300/2563eb/ffffff?text=${encodeURIComponent(document.getElementById('productName').value)}`,
+        image: uploadedImage || PLACEHOLDER,
         description: document.getElementById('productDescription').value
     };
     
