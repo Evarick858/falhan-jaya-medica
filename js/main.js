@@ -183,13 +183,16 @@ async function deleteProductFromFirestore(productId) {
 // Listen to Firestore products in real-time
 function listenToProducts() {
     onSnapshot(productsCol, (snapshot) => {
-        if (snapshot.empty && products.length === 0) {
-            // First run — seed default products
+        products = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
+        
+        // If empty, seed default products
+        if (products.length === 0) {
             DEFAULT_PRODUCTS.forEach(p => addProductToFirestore(p));
             return;
         }
-        products = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
+
         filteredProducts = [...products];
+        currentPage = 1;
         renderProducts();
         updateShowMoreButton();
     });
