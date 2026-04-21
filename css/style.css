@@ -1,13 +1,13 @@
 /* CSS Custom Properties */
 :root {
     /* Colors - Healthcare Theme */
-    --primary-color: #2563eb;
-    --primary-dark: #1e40af;
-    --secondary-color: #10b981;
-    --accent-color: #06b6d4;
+    --primary-color: #16a34a;
+    --primary-dark: #15803d;
+    --secondary-color: #f472b6;
+    --accent-color: #ec4899;
     --text-dark: #1f2937;
     --text-light: #6b7280;
-    --bg-light: #f9fafb;
+    --bg-light: #f0fdf4;
     --bg-white: #ffffff;
     --border-color: #e5e7eb;
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -78,7 +78,7 @@ textarea:focus-visible,
 select:focus-visible {
     outline: 3px solid var(--primary-color);
     outline-offset: 2px;
-    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+    box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.1);
 }
 
 /* Skip to main content link for keyboard navigation */
@@ -293,7 +293,7 @@ select:focus-visible {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.8) 0%, rgba(16, 185, 129, 0.7) 100%);
+    background: linear-gradient(135deg, rgba(22, 163, 74, 0.85) 0%, rgba(236, 72, 153, 0.5) 100%);
     z-index: 1;
 }
 
@@ -1171,7 +1171,7 @@ select:focus-visible {
 .form-group textarea:focus {
     border-color: var(--primary-color);
     background-color: var(--bg-white);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
 }
 
 .form-group textarea {
@@ -1754,7 +1754,7 @@ select:focus-visible {
 
 #productSearch:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
     outline: none;
 }
 
@@ -1972,7 +1972,7 @@ select:focus-visible {
 .back-to-top:hover {
     background-color: var(--primary-dark);
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+    box-shadow: 0 8px 20px rgba(22, 163, 74, 0.4);
 }
 
 .back-to-top ion-icon {
@@ -2666,7 +2666,7 @@ select:focus-visible {
 .admin-sidebar {
     width: 220px;
     min-width: 220px;
-    background: linear-gradient(160deg, #1e3a5f 0%, #2563eb 100%);
+    background: linear-gradient(160deg, #14532d 0%, #16a34a 100%);
     display: flex;
     flex-direction: column;
     padding: 0;
