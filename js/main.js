@@ -97,8 +97,8 @@ function waLink(text) {
 }
 
 function applyStoreConfig() {
-    // Logo & hero title
-    document.querySelectorAll('.logo-text, .hero-title, .footer-logo').forEach(el => {
+    // Logo & hero title (text only, skip if hero uses image)
+    document.querySelectorAll('.logo-text, .footer-logo').forEach(el => {
         el.textContent = storeConfig.name;
     });
 
