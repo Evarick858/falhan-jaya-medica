@@ -1105,8 +1105,8 @@ select:focus-visible {
 
 @media screen and (max-width: 480px) {
     .products-grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-md);
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
     }
     
     .product-card {
@@ -1511,9 +1511,11 @@ select:focus-visible {
     }
     
     /* Ensure all sections use single column */
-    .services-grid,
-    .products-grid {
+    .services-grid {
         grid-template-columns: 1fr;
+    }
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
     
     /* Reduce section padding on mobile */
