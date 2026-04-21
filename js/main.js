@@ -1051,6 +1051,9 @@ function openProductDetail(product) {
         `Halo, saya ingin menanyakan tentang produk:\n\n*${product.name}*\nKategori: ${product.category}\n\nApakah produk ini tersedia?`
     );
 
+    document.getElementById('pdClose').onclick = closeProductDetail;
+    document.getElementById('pdOverlay').onclick = closeProductDetail;
+
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
 }
