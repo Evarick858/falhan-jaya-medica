@@ -3,8 +3,8 @@
     /* Colors - Healthcare Theme */
     --primary-color: #16a34a;
     --primary-dark: #15803d;
-    --secondary-color: #f472b6;
-    --accent-color: #ec4899;
+    --secondary-color: #4ade80;
+    --accent-color: #86efac;
     --text-dark: #1f2937;
     --text-light: #6b7280;
     --bg-light: #f0fdf4;
@@ -293,7 +293,7 @@ select:focus-visible {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(22, 163, 74, 0.85) 0%, rgba(236, 72, 153, 0.5) 100%);
+    background: linear-gradient(135deg, rgba(22, 163, 74, 0.85) 0%, rgba(21, 128, 61, 0.5) 100%);
     z-index: 1;
 }
 
